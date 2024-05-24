@@ -57,7 +57,7 @@ class SettingTableViewController: UITableViewController {
 
           
         
-        cell.textLabel?.textColor = .black
+//        cell.textLabel?.textColor = .black
         cell.textLabel?.font = .boldSystemFont(ofSize: 16)
         
         return cell
