@@ -36,27 +36,14 @@ enum SettingOtinos: Int, CaseIterable {
 
 class SettingTableViewController: UITableViewController {
     
-//    var headerList = ["전체설정", "공지사항", "기타"]
-//    
-//    
-//    
-//    var list = [ "공지사항", "실험실", "버전 정보"]
-//    var list1 = [ "개인 설정", "알림", "채팅", "멀티프로필"]
-//    var list2 = ["고객센터/도움말"]
-//    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
 
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return SettingOtinos.allCases[section].subOptions.count
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -68,10 +55,8 @@ class SettingTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Setting")!
         
 
-        
         cell.textLabel?.text = SettingOtinos.allCases[indexPath.section].subOptions[indexPath.row]
         
-
         cell.textLabel?.font = .boldSystemFont(ofSize: 16)
         
         return cell
